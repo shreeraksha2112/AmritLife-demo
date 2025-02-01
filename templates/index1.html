@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Disease Classification Tool</h1>
+    <h2>Upload Images for Disease Classification</h2>
+    <p>Use our advanced AI to classify diseases from images. Upload your image below to get started!</p>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="files" multiple required>
+        <button type="submit">Predict</button>
+    </form>
+    
+    {% if predictions %}
+        <div class="predictions-container">
+            {% for prediction, confidence, image_url in predictions %}
+                <div class="prediction-card">
+                    <h3>Prediction: {{ prediction }}</h3>
+                    <p>Confidence: {{ confidence | round(2) }}%</p>
+                    <img src="{{ image_url }}" alt="Uploaded Image" class="prediction-image">
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</body>
+</html>

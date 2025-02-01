@@ -1,0 +1,6 @@
+[Home] [Symptom Checker] [Emergency Services] [Info Page] [Features ▼] [Languages ▼] [Resources] [FAQs] [Contact Us] [About Us] [Login/Signup]
+
+1. Hero Section
+Engaging Headline: A clear, concise statement that captures the essence of your project, e.g., "Instant Health Diagnosis and Emergency Response at Your Fingertips."
+Subheadline: A brief explanation of what your tool does, e.g., "Identify health conditions from your symptoms and get connected with emergency services to prevent delays."
+Call to Action (CTA): Primary action button like "Check Your Symptoms Now" or "Get Started" that takes users to the Symptom Checker.
